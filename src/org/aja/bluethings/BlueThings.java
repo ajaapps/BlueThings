@@ -21,30 +21,41 @@ public class BlueThings extends Activity implements ImageFragment.Listener {
         setContentView(R.layout.main);
 
         if (savedInstanceState == null) {
-          // fresh start
-          // (Q: why use fragments? A: just to play around a bit.)
-          TableLayout tl = (TableLayout) findViewById(R.id.tablelayout);
-          int rowcount = tl.getChildCount();
+          // fresh start: fill table   (Q: Why use fragments? A: Having fun coding.)
+          TableLayout table = (TableLayout) findViewById(R.id.tablelayout);
+          int rowcount = table.getChildCount();
           int colcount = rowcount;
-          FragmentTransaction ft = getFragmentManager().beginTransaction();
+          FragmentTransaction traction = getFragmentManager().beginTransaction();
 
           for ( int rownum = 0 ; rownum < rowcount ; rownum++ ) { 
-            TableRow row = (TableRow) tl.getChildAt(rownum);
+            TableRow row = (TableRow) table.getChildAt(rownum);
             int rowid = row.getId();
 
             for ( int colnum = 0 ; colnum < colcount ; colnum++ ) {
-              ImageFragment tf = ImageFragment.newInstance(rownum, colnum);
+              ImageFragment fragment;
+              if ( isMiddleThing(rowcount, colcount, rownum, colnum ) ) {
+                fragment = ImageFragment.newInstance(rownum, colnum, true);
+              } else {
+                fragment = ImageFragment.newInstance(rownum, colnum, false);
+              }
               String tag = makeTag(rownum, colnum);
-              ft.add(rowid, tf, tag);
+              traction.add(rowid, fragment, tag);
             }
 
           };
-          ft.commit();
+          traction.commit();
 
         }
 
     }
 
+    // is (row,col) is the middle cell of the table?
+    private boolean isMiddleThing(int rowcount, int colcount, int row, int col ) {
+      if ( (rowcount*colcount)%2 == 0 ) { return false; } // there is no middle cell
+      if ( row != (rowcount-1)/2 )      { return false; } // not the middle row
+      if ( col != (colcount-1)/2 )      { return false; } // not the middle column
+      return true;
+    }
 
     // implement ImageFragment.Listener
     public void flipNeighbours(int row, int col) {
@@ -62,6 +73,7 @@ public class BlueThings extends Activity implements ImageFragment.Listener {
     }     
 
     private void findAndFlip(int r, int c) {
+      //PLog.d(TAG, "findAndFlip(" + r + "," + c + ")");
       String tag = makeTag(r,c);
       ImageFragment frgmnt = (ImageFragment) getFragmentManager().findFragmentByTag(tag);
       if (frgmnt != null ) { frgmnt.flipState(); };

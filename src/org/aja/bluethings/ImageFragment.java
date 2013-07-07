@@ -23,12 +23,13 @@ public class ImageFragment extends Fragment implements OnClickListener {
       public void flipNeighbours(int row, int col);
     }
     
-    public static ImageFragment newInstance(int row, int col) {
+    public static ImageFragment newInstance(int row, int col, boolean state) {
       //PLog.d(TAG, "newInstance(" + row + "," + col + ")");
       ImageFragment tf = new ImageFragment();
       Bundle b = new Bundle();
       b.putInt("row", row);
       b.putInt("col", col);
+      b.putBoolean("state", state);
       tf.setArguments(b);
       return tf;
     }
@@ -55,7 +56,7 @@ public class ImageFragment extends Fragment implements OnClickListener {
       if ( sIS == null ) {
         mRow = getArguments().getInt("row", -1);
         mColumn = getArguments().getInt("col", -1);
-        mState = false;
+        mState = getArguments().getBoolean("state", false);
       } else {
         mRow = sIS.getInt("row");
         mColumn = sIS.getInt("col");
