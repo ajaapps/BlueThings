@@ -1,20 +1,20 @@
-25 Blue Things: a simple game.
+Blue Things 
+===========
 
-Press on a yellow dot. Its neighbours will get blue things.
-Press on a blue thing. Its neighbours will become yellow dots again.
+A simple game. Press on a yellow dot. Its neighbours will get blue things. Press again.
 
 Tip: try symmetric press sequences. Enjoy the beauty.
 
-![Example screen](images/screencap_bluethings.png) 
+![Example screen](images/screencap_bluethings.png)
 
-Q: Can you add options like more dots or different colors?
+Q: Can you add options like more dots or different colors?  
 A: Yes. But I won't, because I like it to be plain and simple.
 
-Q: What's this app good for?
+Q: What's this app good for?  
 A: Just to spend some nice time with beautiful dots and things. If you are
 asking this question, this app might not be for you.
 
-Q: I love it. Can I donate?
+Q: I love it. Can I donate?  
 A: Please instead donate to EDRI. The members of EDRI (European Digital Rights in Europe) defend civil rights in the information society. http://www.edri.org/about/sponsoring
 
 Copyright © 2013 Aja Apps.  This work is free. You can redistribute it and/or
