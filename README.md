@@ -8,7 +8,7 @@ A nice, simple game. Press on a yellow dot. Its neighbours will get blue things.
 Q: Can you add options like more dots or different colors?  
 A: Yes. But I won't, because I like to keep it plain and simple.
 
-Q: What is the purpose?
+Q: What is the purpose?  
 A: To waste time with beautiful dots and blue things. If you ask
 this question, this app might not be for you.
 
