@@ -1,15 +1,15 @@
 Blue Things 
 ===========
 
-A simple game. Press on a yellow dot. Its neighbours will get blue things. Press again. Press somewhere else. Enjoy beauty.
+A nice, simple game. Press on a yellow dot. Its neighbours will get blue things. Press again. Press somewhere else. Enjoy beauty.
 
-![Example screen](images/screencap_bluethings.png)
+![Example screen](images/screencap_bluethings_small.png)
 
 Q: Can you add options like more dots or different colors?  
-A: Yes. But I won't, because I like it to be plain and simple.
+A: Yes. But I won't, because I like to keep it plain and simple.
 
-Q: What's this app good for?  
-A: To spend/waste time with beautiful dots and blue things. If you ask
+Q: What is the purpose?
+A: To waste time with beautiful dots and blue things. If you ask
 this question, this app might not be for you.
 
 Q: I love it. Can I donate?  
