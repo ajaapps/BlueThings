@@ -19,11 +19,12 @@ public class BlueThings extends Activity {
                                                       0,0,0,0,0,
                                                       0,0,0,0,0, };
 
-    private        Integer    mIds[] = new Integer[]{ 0,0,0,0,0,
-                                                      0,0,0,0,0,
-                                                      0,0,0,0,0,
-                                                      0,0,0,0,0,
-                                                      0,0,0,0,0, };
+    private        Integer    mIds[] = new Integer[]{
+          R.id.r0c0, R.id.r0c1, R.id.r0c2, R.id.r0c3, R.id.r0c4,
+          R.id.r1c0, R.id.r1c1, R.id.r1c2, R.id.r1c3, R.id.r1c4,
+          R.id.r2c0, R.id.r2c1, R.id.r2c2, R.id.r2c3, R.id.r2c4,
+          R.id.r3c0, R.id.r3c1, R.id.r3c2, R.id.r3c3, R.id.r3c4,
+          R.id.r4c0, R.id.r4c1, R.id.r4c2, R.id.r4c3, R.id.r4c4, };
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -32,13 +33,7 @@ public class BlueThings extends Activity {
       super.onCreate(savedInstanceState);
       setContentView(R.layout.main);
 
-      // get ID's of views with tags like r2c4
       for (int i=0 ; i<SIZE*SIZE ; i++) {
-        int row = (int) i/SIZE;
-        int col = i%SIZE;
-        String tag = "r" + String.valueOf(row) + "c" + String.valueOf(col);
-        View view = findViewById(R.id.outerlila).findViewWithTag(tag);
-        mIds[i] = view.getId();
         updateImage(i);
       };
 
@@ -69,7 +64,7 @@ public class BlueThings extends Activity {
     }
  
     private void updateImage(int index) {
-      PLog.d(TAG, "updateImage(" + index + ")");
+      //PLog.d(TAG, "updateImage(" + index + ")");
       ImageView img = (ImageView) findViewById(mIds[index]);
       if ( mStates[index] == 1 ) {
         img.setImageResource(R.drawable.composite);
