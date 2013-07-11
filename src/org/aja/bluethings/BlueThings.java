@@ -8,10 +8,11 @@ import java.util.Arrays;
 
 public class BlueThings extends Activity {
 
-    public static String TAG = "org.aja.bluethings.ACT";
+    private static String TAG = "org.aja.bluethings";
+    private void d(String m) { PLog.d(TAG, m); };
 
     private static int SIZE = 5;
-    // col = i%SIZE    row = (int) i/SIZE   i = row*SIZE + col
+    // col=idx%SIZE ; row=(int)idx/SIZE ; idx=row*SIZE+col
 
     private static Integer mStates[] = new Integer[]{ 0,0,0,0,0,
                                                       0,0,0,0,0,
@@ -19,7 +20,7 @@ public class BlueThings extends Activity {
                                                       0,0,0,0,0,
                                                       0,0,0,0,0, };
 
-    private        Integer    mIds[] = new Integer[]{
+    private Integer mIds[] = new Integer[]{
           R.id.r0c0, R.id.r0c1, R.id.r0c2, R.id.r0c3, R.id.r0c4,
           R.id.r1c0, R.id.r1c1, R.id.r1c2, R.id.r1c3, R.id.r1c4,
           R.id.r2c0, R.id.r2c1, R.id.r2c2, R.id.r2c3, R.id.r2c4,
@@ -28,13 +29,13 @@ public class BlueThings extends Activity {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
-      PLog.d(TAG, "onCreate()");
+      d("onCreate()");
       
       super.onCreate(savedInstanceState);
       setContentView(R.layout.main);
 
       for (int i=0 ; i<SIZE*SIZE ; i++) {
-        updateImage(i);
+        updateImageView(i);
       };
 
     }
@@ -46,7 +47,7 @@ public class BlueThings extends Activity {
       int row = (int) index / SIZE;
       int col = index%SIZE;
 
-      PLog.d(TAG, "flipping neighbours of (" + row + "," + col + ")");
+      d("flipping neighbours of (" + row + "," + col + ")");
       flipImageAt(row-1,col);
       flipImageAt(row+1,col);
       flipImageAt(row,col-1);
@@ -56,21 +57,22 @@ public class BlueThings extends Activity {
 
     private void flipImageAt(int r, int c) {
       if ( r>=0 && r<SIZE && c>=0 && c<SIZE ) { // no wrap-around
-        PLog.d(TAG, "flipImageAt(" + r + "," + c + ")");
+        d("flipImageAt(" + r + "," + c + ")");
         int index = r*SIZE + c;
         mStates[index] = mStates[index] == 0 ? 1 : 0;
-        updateImage(index);
+        updateImageView(index);
       }
     }
  
-    private void updateImage(int index) {
-      //PLog.d(TAG, "updateImage(" + index + ")");
+    private void updateImageView(int index) {
+      //d("updateImageView(" + index + ")");
       ImageView img = (ImageView) findViewById(mIds[index]);
       if ( mStates[index] == 1 ) {
         img.setImageResource(R.drawable.composite);
       } else {
         img.setImageResource(R.drawable.yellowpin);
       }
+      img.invalidate(); // nexus 7 didn't redraw without
     }
 
 }
