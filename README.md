@@ -9,8 +9,7 @@ Q: Can you add options like more dots or different colors?
 A: Yes. But I won't, because I like to keep it plain and simple.
 
 Q: What is the purpose?  
-A: To waste time with beautiful dots and blue things. If you ask
-this question, this app might not be for you.
+A: To waste time with beautiful dots and blue things.
 
 Q: I love it. Can I donate?  
 A: Please instead donate to EDRI. The members of EDRI (European Digital Rights in Europe) defend civil rights in the information society. http://www.edri.org/about/sponsoring
