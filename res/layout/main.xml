@@ -1,21 +1,165 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-	android:id="@+id/outercontainer"
-	android:layout_width="match_parent"
-	android:layout_height="match_parent"
-	android:padding="8dp"
-	>
-    <TableLayout
-        android:id="@+id/tablelayout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        >
-        <TableRow android:id="@+id/row1" />
-        <TableRow android:id="@+id/row2" />
-        <TableRow android:id="@+id/row3" />
-        <TableRow android:id="@+id/row4" />
-        <TableRow android:id="@+id/row5" />
-    </TableLayout>
-</RelativeLayout>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:id="@+id/outerlila"
+  android:layout_width="wrap_content" android:layout_height="wrap_content"
+  android:layout_gravity="center" android:orientation="vertical"
+  >
+  <LinearLayout android:id="@+id/row0"
+    android:layout_width="wrap_content" android:layout_height="wrap_content"
+    android:layout_gravity="center" android:orientation="horizontal" 
+    >
+        <ImageView android:id="@+id/r0c0" 
+          android:layout_width="wrap_content" android:layout_height="wrap_content"
+          android:src="@drawable/yellowpin" android:contentDescription="@string/cell"
+          android:clickable="true" android:onClick="onClick"
+          />
+        <ImageView android:id="@+id/r0c1" 
+          android:layout_width="wrap_content" android:layout_height="wrap_content"
+          android:src="@drawable/yellowpin" android:contentDescription="@string/cell"
+          android:clickable="true" android:onClick="onClick"
+          />
+        <ImageView android:id="@+id/r0c2" 
+          android:layout_width="wrap_content" android:layout_height="wrap_content"
+          android:src="@drawable/yellowpin" android:contentDescription="@string/cell"
+          android:clickable="true" android:onClick="onClick"
+          />
+        <ImageView android:id="@+id/r0c3" 
+          android:layout_width="wrap_content" android:layout_height="wrap_content"
+          android:src="@drawable/yellowpin" android:contentDescription="@string/cell"
+          android:clickable="true" android:onClick="onClick"
+          />
+        <ImageView android:id="@+id/r0c4" 
+          android:layout_width="wrap_content" android:layout_height="wrap_content"
+          android:src="@drawable/yellowpin" android:contentDescription="@string/cell"
+          android:clickable="true" android:onClick="onClick"
+          />
+   </LinearLayout>  <!-- end of row -->
+
+  <LinearLayout android:id="@+id/row1"
+    android:layout_width="wrap_content" android:layout_height="wrap_content"
+    android:layout_gravity="center" android:orientation="horizontal" 
+    >
+        <ImageView android:id="@+id/r1c0" 
+          android:layout_width="wrap_content" android:layout_height="wrap_content"
+          android:src="@drawable/yellowpin" android:contentDescription="@string/cell"
+          android:clickable="true" android:onClick="onClick"
+          />
+        <ImageView android:id="@+id/r1c1" 
+          android:layout_width="wrap_content" android:layout_height="wrap_content"
+          android:src="@drawable/yellowpin" android:contentDescription="@string/cell"
+          android:clickable="true" android:onClick="onClick"
+          />
+        <ImageView android:id="@+id/r1c2" 
+          android:layout_width="wrap_content" android:layout_height="wrap_content"
+          android:src="@drawable/yellowpin" android:contentDescription="@string/cell"
+          android:clickable="true" android:onClick="onClick"
+          />
+        <ImageView android:id="@+id/r1c3" 
+          android:layout_width="wrap_content" android:layout_height="wrap_content"
+          android:src="@drawable/yellowpin" android:contentDescription="@string/cell"
+          android:clickable="true" android:onClick="onClick"
+          />
+        <ImageView android:id="@+id/r1c4" 
+          android:layout_width="wrap_content" android:layout_height="wrap_content"
+          android:src="@drawable/yellowpin" android:contentDescription="@string/cell"
+          android:clickable="true" android:onClick="onClick"
+          />
+   </LinearLayout>  <!-- end of row -->
+
+  <LinearLayout android:id="@+id/row2"
+    android:layout_width="wrap_content" android:layout_height="wrap_content"
+    android:layout_gravity="center" android:orientation="horizontal" 
+    >
+        <ImageView android:id="@+id/r2c0" 
+          android:layout_width="wrap_content" android:layout_height="wrap_content"
+          android:src="@drawable/yellowpin" android:contentDescription="@string/cell"
+          android:clickable="true" android:onClick="onClick"
+          />
+        <ImageView android:id="@+id/r2c1" 
+          android:layout_width="wrap_content" android:layout_height="wrap_content"
+          android:src="@drawable/yellowpin" android:contentDescription="@string/cell"
+          android:clickable="true" android:onClick="onClick"
+          />
+        <ImageView android:id="@+id/r2c2" 
+          android:layout_width="wrap_content" android:layout_height="wrap_content"
+          android:src="@drawable/yellowpin" android:contentDescription="@string/cell"
+          android:clickable="true" android:onClick="onClick"
+          />
+        <ImageView android:id="@+id/r2c3" 
+          android:layout_width="wrap_content" android:layout_height="wrap_content"
+          android:src="@drawable/yellowpin" android:contentDescription="@string/cell"
+          android:clickable="true" android:onClick="onClick"
+          />
+        <ImageView android:id="@+id/r2c4" 
+          android:layout_width="wrap_content" android:layout_height="wrap_content"
+          android:src="@drawable/yellowpin" android:contentDescription="@string/cell"
+          android:clickable="true" android:onClick="onClick"
+          />
+   </LinearLayout>  <!-- end of row -->
+
+  <LinearLayout android:id="@+id/row3"
+    android:layout_width="wrap_content" android:layout_height="wrap_content"
+    android:layout_gravity="center" android:orientation="horizontal" 
+    >
+        <ImageView android:id="@+id/r3c0" 
+          android:layout_width="wrap_content" android:layout_height="wrap_content"
+          android:src="@drawable/yellowpin" android:contentDescription="@string/cell"
+          android:clickable="true" android:onClick="onClick"
+          />
+        <ImageView android:id="@+id/r3c1" 
+          android:layout_width="wrap_content" android:layout_height="wrap_content"
+          android:src="@drawable/yellowpin" android:contentDescription="@string/cell"
+          android:clickable="true" android:onClick="onClick"
+          />
+        <ImageView android:id="@+id/r3c2" 
+          android:layout_width="wrap_content" android:layout_height="wrap_content"
+          android:src="@drawable/yellowpin" android:contentDescription="@string/cell"
+          android:clickable="true" android:onClick="onClick"
+          />
+        <ImageView android:id="@+id/r3c3" 
+          android:layout_width="wrap_content" android:layout_height="wrap_content"
+          android:src="@drawable/yellowpin" android:contentDescription="@string/cell"
+          android:clickable="true" android:onClick="onClick"
+          />
+        <ImageView android:id="@+id/r3c4" 
+          android:layout_width="wrap_content" android:layout_height="wrap_content"
+          android:src="@drawable/yellowpin" android:contentDescription="@string/cell"
+          android:clickable="true" android:onClick="onClick"
+          />
+   </LinearLayout>  <!-- end of row -->
+
+  <LinearLayout android:id="@+id/row4"
+    android:layout_width="wrap_content" android:layout_height="wrap_content"
+    android:layout_gravity="center" android:orientation="horizontal" 
+    >
+        <ImageView android:id="@+id/r4c0" 
+          android:layout_width="wrap_content" android:layout_height="wrap_content"
+          android:src="@drawable/yellowpin" android:contentDescription="@string/cell"
+          android:clickable="true" android:onClick="onClick"
+          />
+        <ImageView android:id="@+id/r4c1" 
+          android:layout_width="wrap_content" android:layout_height="wrap_content"
+          android:src="@drawable/yellowpin" android:contentDescription="@string/cell"
+          android:clickable="true" android:onClick="onClick"
+          />
+        <ImageView android:id="@+id/r4c2" 
+          android:layout_width="wrap_content" android:layout_height="wrap_content"
+          android:src="@drawable/yellowpin" android:contentDescription="@string/cell"
+          android:clickable="true" android:onClick="onClick"
+          />
+        <ImageView android:id="@+id/r4c3" 
+          android:layout_width="wrap_content" android:layout_height="wrap_content"
+          android:src="@drawable/yellowpin" android:contentDescription="@string/cell"
+          android:clickable="true" android:onClick="onClick"
+          />
+        <ImageView android:id="@+id/r4c4" 
+          android:layout_width="wrap_content" android:layout_height="wrap_content"
+          android:src="@drawable/yellowpin" android:contentDescription="@string/cell"
+          android:clickable="true" android:onClick="onClick"
+          />
+   </LinearLayout>  <!-- end of row -->
+
+</LinearLayout> <!-- end of table -->
+  
 
